@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class ProjectileLauncher : MonoBehaviour
@@ -10,6 +11,8 @@ public class ProjectileLauncher : MonoBehaviour
     [Space]
     [SerializeField] private GameObject projectile;
     [SerializeField] private GameObject barrel;
+    [Space] 
+    [SerializeField] private UnityEvent onShot;
     
     private Camera _mainCamera;
     private Transform _mainCamTransform;
@@ -48,6 +51,7 @@ public class ProjectileLauncher : MonoBehaviour
         {
             if (Time.time > (1 / fireRate) + _lastFireTime)
             {
+                onShot.Invoke();
                 GameObject projectileInstance = 
                     Instantiate(projectile, transform.position, Quaternion.LookRotation(fireDir, Vector3.up));
                 projectileInstance.GetComponent<Projectile>().damage = damage;
