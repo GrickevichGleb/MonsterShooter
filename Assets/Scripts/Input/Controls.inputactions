@@ -1,0 +1,51 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Firing",
+            "id": "5e5cac17-d358-42a0-9bd5-8699fcd75ca2",
+            "actions": [
+                {
+                    "name": "Aiming",
+                    "type": "PassThrough",
+                    "id": "2e1f110d-0189-4f4e-b36e-55401d9c6847",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "16f8fbde-6200-4628-a6c3-c374812004f2",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Aiming",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard and Mouse",
+            "bindingGroup": "Keyboard and Mouse",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
